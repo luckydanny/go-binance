@@ -53,6 +53,14 @@ func getWsEndpoint() string {
 	return BaseWsMainUrl
 }
 
+fun SetWsEndpoint(url string) {
+	if UseTestnet {
+		BaseWsTestnetUrl=url
+	} else{
+		BaseWsMainUrl=url
+	}
+}
+
 // getCombinedEndpoint return the base endpoint of the combined stream according the UseTestnet flag
 func getCombinedEndpoint() string {
 	if UseTestnet {
