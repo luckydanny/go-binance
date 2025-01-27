@@ -53,11 +53,11 @@ func getWsEndpoint() string {
 	return BaseWsMainUrl
 }
 
-fun SetWsEndpoint(url string) {
+func SetWsEndpoint(url string) {
 	if UseTestnet {
-		BaseWsTestnetUrl=url
-	} else{
-		BaseWsMainUrl=url
+		BaseWsTestnetUrl = url
+	} else {
+		BaseWsMainUrl = url
 	}
 }
 

@@ -214,6 +214,14 @@ func newJSON(data []byte) (j *simplejson.Json, err error) {
 	return j, nil
 }
 
+func SetApiEndpoint(url string) {
+	if UseTestnet {
+		BaseApiTestnetUrl = url
+	} else {
+		BaseApiMainUrl = url
+	}
+}
+
 // getApiEndpoint return the base endpoint of the WS according the UseTestnet flag
 func getApiEndpoint() string {
 	if UseTestnet {
